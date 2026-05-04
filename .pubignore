@@ -1,0 +1,20 @@
+.dart_tool/
+build/
+coverage/
+pubspec.lock
+*.iml
+**/.DS_Store
+**/Thumbs.db
+
+# Example app build artifacts (keep example source only)
+example/.dart_tool/
+example/build/
+example/ios/
+example/android/
+example/linux/
+example/macos/
+example/windows/
+example/web/
+
+# Dev-only UI reference files (not needed for the published package)
+support-widget-ui/

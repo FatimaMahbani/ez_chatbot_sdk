@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>EZ Insurance Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-demo">
+      <p class="page-demo__hint">معاينة واجهة الدردشة — الزر في أسفل يمين الصفحة</p>
+    </main>
+
+    <div id="ez-chat-widget" class="ez-chat" aria-live="polite">
+      <button
+        type="button"
+        class="ez-chat__launcher"
+        id="ez-chat-launcher"
+        aria-expanded="false"
+        aria-controls="ez-chat-panel"
+        title="فتح المحادثة"
+      >
+        <span class="ez-chat__launcher-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z"
+              fill="currentColor"
+            />
+            <path d="M7 9H17V11H7V9ZM7 12H14V14H7V12Z" fill="currentColor" />
+          </svg>
+        </span>
+      </button>
+
+      <div class="ez-chat__panel" id="ez-chat-panel" role="dialog" aria-modal="false" aria-hidden="true" hidden>
+        <div class="ez-chat__card">
+          <header class="ez-chat__header">
+            <button type="button" class="ez-chat__close" id="ez-chat-close" aria-label="إغلاق">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+            <div class="ez-chat__header-main">
+              <img
+                class="ez-chat__logo"
+                src="https://fc-use1-00-pics-bkt-00.s3.amazonaws.com/742cbb0e27a2f1913c29af682e2cde3bfba308a89a0d2c7b29ae1aaf881ecdfc/f_appLevelPicFull/img_advekcqdbm_222351d293de3f9feb9c39e156cba69a5676303120114a4c8a3da7b6252c554a.png"
+                alt="EZ Insurance"
+                width="44"
+                height="44"
+              />
+              <div class="ez-chat__header-text">
+                <h1 class="ez-chat__title">EZ Insurance Support</h1>
+                <p class="ez-chat__welcome">أهلاً بك 👋 نحن هنا لخدمتك</p>
+              </div>
+            </div>
+          </header>
+
+          <div class="ez-chat__body">
+            <div class="ez-chat__messages" id="ez-chat-messages"></div>
+
+            <div class="ez-chat__typing-wrap" id="ez-chat-typing-wrap" hidden>
+              <div class="ez-chat__typing" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="ez-chat__waiting" id="ez-chat-waiting" hidden>
+              <span class="ez-chat__waiting-text">في انتظار الرسائل...</span>
+            </div>
+          </div>
+
+          <footer class="ez-chat__composer">
+            <label class="ez-chat__input-wrap">
+              <span class="visually-hidden">رسالة</span>
+              <input
+                type="text"
+                class="ez-chat__input"
+                id="ez-chat-input"
+                autocomplete="off"
+                placeholder="اكتب رسالتك..."
+                maxlength="2000"
+              />
+            </label>
+            <button type="button" class="ez-chat__send" id="ez-chat-send" aria-label="إرسال">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              </svg>
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
